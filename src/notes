@@ -1,0 +1,19 @@
+| Location                       | `final` allowed? | `static` allowed? | `static final` allowed? |
+| ------------------------------ | ---------------- | ----------------- | ----------------------- |
+| **Inside main()**              | ✔ Yes            | ❌ No              | ❌ No                    |
+| **Outside main (class level)** | ✔ Yes            | ✔ Yes             | ✔ Yes                   |
+
+
+❗ Why static cannot be inside a method?
+
+Because inside methods, variables are local—they are stored on the stack and exist only while the method runs.
+
+static means a variable lives as long as the class is loaded, not tied to method execution.
+So Java does not allow mixing them:
+
+static final int X = 10;  // ❌ illegal inside main()
+
+3️⃣ Why constructors aren’t inherited
+Constructor is tied to creating an object of its own class.
+If constructors were inherited, the subclass could be created without calling its own initialization logic, which could break encapsulation.
+Hence Java requires explicit super() call or default constructor chaining.

@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class Test {
+     static String COMPANY;
     public static void main(String[] args) {
 //        char ch='r';
 //        byte b = 120;
@@ -31,6 +32,24 @@ public class Test {
 //        String name2="Raghu";
 //        System.out.println(name1==name2);
 //        System.out.println(name1.equals(name2));
+
+        //Creating final variable
+         COMPANY = "Raghutek";
+
+////Fibonacci series
+//       int n =20; // how many i want
+//        long a=0,b=1;
+//        for (int i = 0; i < n; i++) {
+//            System.out.print(a+" ");
+//            long next=a+b;
+//            a=b;
+//            b=next;
+//        }
+//
+
+
+
+
 
 
 
