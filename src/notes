@@ -17,3 +17,4 @@ static final int X = 10;  // ❌ illegal inside main()
 Constructor is tied to creating an object of its own class.
 If constructors were inherited, the subclass could be created without calling its own initialization logic, which could break encapsulation.
 Hence Java requires explicit super() call or default constructor chaining.
+

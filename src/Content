@@ -1,0 +1,7 @@
+
+Order of Execution
+1️⃣ Static variables
+2️⃣ Static blocks
+3️⃣ Instance variables
+4️⃣ Instance blocks
+5️⃣ Constructor

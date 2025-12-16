@@ -1,0 +1,77 @@
+public class Test {
+    int a,b;
+    System.out.println(a);   // ❌ ERROR
+    Test(int a){
+         a=a;               // ❌ LOGICAL ERROR
+    }
+}
+
+
+❌ 1. System.out.println(a); inside class body
+You cannot write executable statements directly inside a class.
+Only allowed at class level:
+variables
+methods
+constructors
+blocks
+👉 System.out.println() must be inside a method, constructor, or block.
+
+
+public class chain {
+    int i,j;
+    public chain(){
+        this(10);
+    }
+    public chain(int a){
+        this(10,20);
+    }
+    public chain(int a, int b){
+        this();
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
+
+👉  recursive call error
+
+
+class Test {
+
+    static {
+        System.out.println("Static Block");
+    }
+
+    {
+        System.out.println("Instance Block");
+    }
+
+    Test() {
+        System.out.println("Constructor");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main Start");
+        new Test();
+        new Test();
+        System.out.println("Main End");
+    }
+}
+
+👉Static Block
+ Main Start
+ Instance Block
+ Constructor
+ Instance Block
+ Constructor
+ Main End
+
+ 🎯 Golden Rule (Interview Line)
+ Static blocks execute once during class loading.
+ Instance blocks execute every time an object is created.
+ Constructors execute after instance blocks.
+
+🎯 One-Line Interview Rule (VERY IMPORTANT)
+Static → Instance → Constructor
+Parent first → Child next
