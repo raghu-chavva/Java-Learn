@@ -18,3 +18,14 @@ Constructor is tied to creating an object of its own class.
 If constructors were inherited, the subclass could be created without calling its own initialization logic, which could break encapsulation.
 Hence Java requires explicit super() call or default constructor chaining.
 
+🔹 What is a Singleton Class?
+
+A Singleton ensures that only ONE object of a class is created in the entire JVM.
+
+🔑 Key Rules
+
+Private constructor
+
+Private static instance
+
+Public static method to access instance
